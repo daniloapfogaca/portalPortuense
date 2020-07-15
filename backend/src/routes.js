@@ -1,11 +1,11 @@
 const express = require('express');
 
-const usuarioController = require('./controllers/UsuarioController');
 const UsuarioController = require('./controllers/UsuarioController');
 const CategoriaController = require('./controllers/CategoriaController');
 const PerfilController = require('./controllers/PerfilController');
 const UnidadeController = require('./controllers/UnidadeController');
 const ProdutoController = require('./controllers/ProdutoController');
+const EnderecoController = require('./controllers/EnderecoController');
 
 const routes = express.Router();
 
@@ -13,6 +13,11 @@ routes.get('/categoria', CategoriaController.index);
 routes.get('/categoria/:categoriaId', CategoriaController.indexById);
 routes.post('/categoria', CategoriaController.create);
 routes.put('/categoria/:categoriaId', CategoriaController.update);
+
+routes.get('/endereco', EnderecoController.index);
+routes.get('/endereco/:enderecoId', EnderecoController.indexById);
+routes.post('/endereco', EnderecoController.create);
+routes.put('/endereco/:enderecoId', EnderecoController.update);
 
 routes.get('/perfil', PerfilController.index);
 routes.get('/perfil/:perfilId', PerfilController.indexById);
