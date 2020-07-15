@@ -7,6 +7,7 @@ exports.up = function(knex) {
 
         table.dateTime('dataUltModif', 6).notNullable();
 
+        table.integer('usuarioPerfilId').unsigned().notNullable().references('id').inTable('usuario');
         table.integer('perfilId').unsigned().notNullable().references('id').inTable('perfil');
         table.integer('usuarioId').unsigned().notNullable().references('id').inTable('usuario');
     });
