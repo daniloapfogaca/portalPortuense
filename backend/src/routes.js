@@ -2,7 +2,7 @@ const express = require('express');
 
 const UsuarioController = require('./controllers/UsuarioController');
 const CategoriaController = require('./controllers/CategoriaController');
-const Pedido = require('./controllers/PedidoController');
+const PedidoItemController = require('./controllers/PedidoItemController')
 const PedidoController = require('./controllers/PedidoController');
 const PerfilController = require('./controllers/PerfilController');
 const UnidadeController = require('./controllers/UnidadeController');
@@ -25,7 +25,9 @@ routes.put('/endereco/:enderecoId', EnderecoController.update);
 routes.get('/pedido', PedidoController.index);
 routes.get('/pedido/:pedidoId', PedidoController.indexById);
 routes.post('/pedido', PedidoController.create);
-routes.put('/pedido/:pedidoId', PedidoController.update);
+
+routes.get('/pedidoItem', PedidoItemController.index);
+routes.get('/pedidoItem/:pedidoItemId', PedidoItemController.indexById);
 
 routes.get('/perfil', PerfilController.index);
 routes.get('/perfil/:perfilId', PerfilController.indexById);

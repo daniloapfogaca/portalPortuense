@@ -4,7 +4,16 @@ const knexfile = require('../../knexfile');
 
 module.exports = {
     async index(request, response) {
-        const pedidos = await connection('pedido').select('*');
+        const { cliente } = request.query;
+
+        const pedidos = await connection('pedido')
+        .modify(function(queryBuilder) {            
+            if ( cliente && cliente !== 'Selecione...' ) {
+                queryBuilder
+                    .where('clienteId', cliente)
+            }
+        })
+        .select('*');
 
         return response.json(pedidos);
     },
@@ -62,24 +71,24 @@ module.exports = {
             
         return response.json({ "sucess" : true });
     },
+    
+    // async update(request, response) {
+    //     const { pedidoId } = request.params;
+    //     const  usuarioId  = request.headers.authorization;
+    //     const dataUltModif = getDate(); 
 
-    async update(request, response) {
-        const { pedidoId } = request.params;
-        const  usuarioId  = request.headers.authorization;
-        const dataUltModif = getDate(); 
+    //     const {
+    //         nomepedido,
+    //         descricao            
+    //     } = request.body;
 
-        const {
-            nomepedido,
-            descricao            
-        } = request.body;
+    //     await connection('pedido').where('id', pedidoId).update({
+    //         nomepedido,
+    //         descricao,
+    //         usuarioId,
+    //         dataUltModif
+    //     });
 
-        await connection('pedido').where('id', pedidoId).update({
-            nomepedido,
-            descricao,
-            usuarioId,
-            dataUltModif
-        });
-
-        return response.status(204).send();
-    },
+    //     return response.status(204).send();
+    // },
 };
