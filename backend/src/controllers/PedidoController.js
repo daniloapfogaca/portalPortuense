@@ -1,5 +1,6 @@
 const connection = require('../database/connection');
 const getDate = require('../utils/getDate');
+const knexfile = require('../../knexfile');
 
 module.exports = {
     async index(request, response) {
@@ -20,24 +21,46 @@ module.exports = {
     },
     
     async create(request, response) {
-        const usuarioId  = requesßt.headers.authorization;
+        const usuarioId  = request.headers.authorization;
         const dataPedido = getDate(); 
         const dataUltModif = getDate(); 
 
         const {
             total,
-            clienteId
+            clienteId,
+            items
         } = request.body;
 
-        const [id] = await connection('pedido').insert({
+        const pedido = {
             total,
             clienteId,
             dataPedido,
             usuarioId,
             dataUltModif
-        });
+        }
 
-        return response.json({ id, nomepedido });
+        const trx = await connection.transaction();
+
+        const insertedIds = await trx('pedido').insert(pedido);
+
+        const pedidoId = insertedIds[0];
+
+        for ( var i = 0; i < items.length; i++ ) {
+
+            const itemPedido = {
+                produtoId : items[i].produtoId,
+                quantidade : items[i].quantidade,
+                dataUltModif,
+                pedidoId,
+                usuarioId
+            }
+  
+            await trx('pedidoItem').insert(itemPedido);
+        };
+
+        await trx.commit();
+            
+        return response.json({ "sucess" : true });
     },
 
     async update(request, response) {

@@ -3,13 +3,22 @@ const getDate = require('../utils/getDate');
 
 module.exports = {
     async index(request, response) {
-        const enderecos = await connection('endereco').select('*');
+        const { cliente } = request.query;
+
+        const enderecos = await connection('endereco')
+        .modify(function(queryBuilder) {            
+            if ( cliente && cliente !== 'Selecione...' ) {
+                queryBuilder
+                    .where('clienteId', cliente)
+            }
+        })
+        .select('*');
 
         return response.json(enderecos);
     },
 
     async indexById (request, response) {
-        const { enderecoId }  = request.params;
+        const { enderecoId }  = request.params;        
 
         const endereco = await connection('endereco')
             .where('id', enderecoId)
