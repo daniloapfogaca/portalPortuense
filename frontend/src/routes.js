@@ -1,25 +1,37 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Categorias from './pages/Categorias';
-import Dashboard from './pages/Dashboard';
-import Logon from './pages/Logon';
-import Produtos from './pages/Produtos';
-import Usuarios from './pages/Usuarios';
+// Principais
+import Dashboard from './pages/Principais/Dashboard';
+import Logon from './pages/Principais/Logon';
+
+// Entidades
+import Categorias from './pages/Entidades/Categorias';
+import Produtos from './pages/Entidades/Produtos';
+import Usuarios from './pages/Entidades/Usuarios';
+
+// Listas
+import ListaCategoria from './pages/Listas/ListaCategoria';
+import ListaProduto from './pages/Listas/ListaProduto';
+import ListaUsuario from './pages/Listas/ListaUsuario';
 
 
 const Routes = (props) => {
     return(
         <BrowserRouter>
             <Switch>
-                <Route component={Logon} path="/" exact />
-                <Route component={Categorias} path="/categorias" exact />
-                <Route component={Categorias} path="/categorias/:categoriaId" />
-                <Route component={Dashboard} path="/dashboard" />
-                <Route component={Produtos} path="/produtos" exact />
-                <Route component={Produtos} path="/produtos/:produtoId" />
-                <Route component={Usuarios} path="/usuarios" exact />                
-                <Route component={Usuarios} path="/usuarios/:usuarioId" />                
+                <Route path="/" exact component={Logon}  />
+                <Route path="/dashboard" component={Dashboard} />
+                <Route path="/categorias" component={Categorias} exact />
+                <Route path="/categorias/:categoriaId" component={Categorias} />
+                <Route path="/produtos" component={Produtos} exact />
+                <Route path="/produtos/:produtoId" component={Produtos} />
+                <Route path="/usuarios" component={Usuarios} exact />                
+                <Route path="/usuarios/:usuarioId" component={Usuarios} /> 
+                <Route path="/lista-categoria" component={ListaCategoria} /> 
+                <Route path="/lista-produto" component={ListaProduto} /> 
+                <Route path="/lista-usuario" component={ListaUsuario} /> 
+
             </Switch>
         </BrowserRouter>
     );

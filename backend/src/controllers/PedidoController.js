@@ -36,6 +36,7 @@ module.exports = {
 
         const {
             total,
+            obsPedido,
             clienteId,
             items
         } = request.body;
@@ -44,6 +45,7 @@ module.exports = {
             total,
             clienteId,
             dataPedido,
+            obsPedido,
             usuarioId,
             dataUltModif
         }

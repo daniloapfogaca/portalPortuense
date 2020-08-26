@@ -8,6 +8,7 @@ exports.up = function(knex) {
         table.decimal('total').notNullable();
         table.dateTime('dataPedido', 6).notNullable();
         table.dateTime('dataUltModif', 6).notNullable();
+        table.string('obsPedido', 400);
 
         table.integer('clienteId').unsigned().notNullable().references('id').inTable('usuario');
         table.integer('usuarioId').unsigned().notNullable().references('id').inTable('usuario');

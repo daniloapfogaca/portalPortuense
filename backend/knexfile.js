@@ -7,7 +7,7 @@ module.exports = {
     connection: {
       host : 'mysql.codefour.com.br',
       user : 'codefo06_gabi',
-      password : 'codefour123!@#',
+      password : 'Code123!@#',
       database : 'codefo06_portuense'
     },
     // connection: {

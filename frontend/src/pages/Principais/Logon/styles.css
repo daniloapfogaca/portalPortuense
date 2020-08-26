@@ -1,0 +1,123 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#showcase {
+  min-height: 200px;
+  text-align: center;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background: var(--color-primary) url("../../../assets/images/logo_bg.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+
+#showcase img {
+  padding-top: 40px;
+  padding-left: 90px;
+  width: 70%;
+  height: auto;
+  padding-bottom: 0;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+  padding: 0 1.5em;
+}
+
+#main {
+  background-color: var(--color-primary);
+  /* height: 60%; */
+  text-align: center;
+}
+
+#section-a .content-wrap form {
+  padding-top: 80px;
+}
+
+.input-block {
+  font-size: 1.2em;
+}
+
+.input-block input {
+  border-radius: 0.3em;
+  width: 70%;
+  height: 1.8em;
+  border: 1px solid var(--color-line-in-white);
+  outline: 0;
+  color: var(--color-text-base);
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  font-size: 1.3em;
+  width: 140px;
+  height: 1.8em;
+  display: inline-block;
+  background: var(--color-primary-darker);
+  border-radius: 0.5rem;
+  color: var(--color-text-base);
+  margin-bottom: 80px;
+}
+
+#main-footer {
+  background: var(--color-box-base);
+  color: var(--color-text-base);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#main-footer div {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+#main-footer div:last-child {
+  justify-self: right;
+  margin-right: 5px;
+}
+
+@media(min-width: 700px) {
+  .container {
+    margin-top: 15%;
+  }
+
+  .grid-logon {
+    margin: 0 auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+
+  #showcase {
+    height: 300px;
+  }
+
+  #showcase img {
+    width: 250px;
+    margin-left: -140px;
+  }
+
+  #showcase .bg-image {
+    height: 300px;
+    max-width: 350px;
+    background: var(--color-primary) url("../../../assets/images/logo_bg.jpg") 10% 10% no-repeat;
+  }
+
+  #main {
+    max-width: 700px;
+    height: 100%
+  }
+
+  #section-a .content-wrap form {
+    padding-top: 55px;
+  }
+}
