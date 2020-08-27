@@ -19,9 +19,14 @@ function  DataTableGenerica (props) {
         headCells: {
             style: {              
                 color: 'var(--color-primary)',
-                
+                fontSize: '1em'
             },
         },
+        rows: {
+            style: {
+                fontSize: '0.9em'
+            }
+        }
     };
 
     return (

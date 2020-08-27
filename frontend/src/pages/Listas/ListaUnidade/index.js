@@ -9,18 +9,17 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import DataTableGenerica from '../../../components/DataTableGenerica';
 
-const ListaUsuario = (props) => {
-
+const ListaUnidade = (props) => {
     return (
         <div>
           <Header />
-          <div id="lista-usuario">
+          <div id="lista-unidade">
             <div className="table-filter">
                 <div className="table-title">
-                    <p>Usuários</p>
+                    <p>Unidades</p>
                 </div>
                 <div className="table-search">
-                    <input type="text" placeholder="Encontre um usuário"/>
+                    <input type="text" placeholder="Encontre uma unidade"/>
                     <button><FiSearch size={18} color="#000000" /></button>
                 </div>
             </div>
@@ -33,4 +32,4 @@ const ListaUsuario = (props) => {
     )
 };
 
-export default ListaUsuario;
+export default ListaUnidade;

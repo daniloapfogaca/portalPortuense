@@ -1,18 +1,16 @@
 import React from 'react';
 import './styles.css';
-import { FiSearch } from 'react-icons/fi'; //pacote feather icons dentro do react
-
 
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 
-const Categorias = (props) => {
+const Unidades = (props) => {
     return (
         <div>
             <Header />
-            <div id="categorias">
+            <div id="unidades">
                 <div className="form-title">
-                    <h1>Cadastro de Categorias</h1>
+                    <h1>Cadastro de Unidades</h1>
                 </div>
                 <form action="">
                     <div id="esquerda">
@@ -39,4 +37,4 @@ const Categorias = (props) => {
     )
 };
 
-export default Categorias;
+export default Unidades;

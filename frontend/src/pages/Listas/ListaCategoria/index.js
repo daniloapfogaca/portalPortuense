@@ -40,7 +40,7 @@ const ListaCategoria = (props) => {
     return (
         <div>
           <Header />
-          <div id="categorias">
+          <div id="lista-categoria">
             <div className="table-filter">
                 <div className="table-title">
                     <p>Categorias</p>
@@ -50,10 +50,12 @@ const ListaCategoria = (props) => {
                     <button><FiSearch size={18} color="#000000" /></button>
                 </div>
             </div>
-            <DataTableGenerica
-                data={data}
-                columns={columns}
-            />
+            <div className="table-container">
+                <DataTableGenerica
+                    data={data}
+                    columns={columns}
+                />
+            </div>
           </div>
           <Footer />
         </div>

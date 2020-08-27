@@ -19,12 +19,12 @@ const Logon = (props) => {
                 <section id="section-a" className="box">
                     <div className="content-wrap">
                         <form action="" id="login">
-                            <div className="input-block">
+                            <div className="input-block-logon">
                                 <label htmlFor="user">E-mail</label>
                                 <input type="email" id="user" />
                             </div>
-
-                            <div className="input-block">
+                           
+                            <div className="input-block-logon">
                                 <label htmlFor="password">Senha</label>
                                 <input type="password" id="password" />
                             </div>
@@ -40,10 +40,10 @@ const Logon = (props) => {
             </main>
           </div>
 
-          <fotter id="main-footer" className="grid">
+          {/* <fotter id="main-footer" className="grid">
             <div><a href="/esqueci-senha">Esqueci a senha</a></div>
             <div><a href="/user?action=novo">Cadastro</a></div>
-          </fotter>
+          </fotter> */}
         </div>
     )
 };
