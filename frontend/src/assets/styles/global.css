@@ -51,6 +51,11 @@ form {
   justify-items: center;
 }
 
+img {
+  margin: 0;
+  display: block;
+}
+
 .input-block label, input {
   display: block;
 }

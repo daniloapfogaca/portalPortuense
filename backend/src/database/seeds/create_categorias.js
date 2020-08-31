@@ -2,7 +2,7 @@ exports.seed = function(knex) {
     return knex('categoria').insert([
         { nomeCategoria : 'Lanches', descricao: 'Sanduíches, Hambúrgueres e Beirutes', dataUltModif: '2020-07-15', usuarioId: 1},
         { nomeCategoria : 'Matinais', descricao: 'Servidos até as 11h da manhã', dataUltModif: '2020-07-15', usuarioId: 1},
-        { nomeCategoria : 'PBebidas', descricao: 'Sucos, águas e Refrigerantes', dataUltModif: '2020-07-15', usuarioId: 1},
+        { nomeCategoria : 'Bebidas', descricao: 'Sucos, águas e Refrigerantes', dataUltModif: '2020-07-15', usuarioId: 1},
         { nomeCategoria : 'Frutas', descricao: 'Frutas da estação', dataUltModif: '2020-07-15', usuarioId: 1},
         { nomeCategoria : 'Acompanhamentos', descricao: 'Aperitivos e porções', dataUltModif: '2020-07-15', usuarioId: 1},
         { nomeCategoria : 'Cafés', descricao: 'Cafés e sachês', dataUltModif: '2020-07-15', usuarioId: 1},
