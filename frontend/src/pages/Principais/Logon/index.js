@@ -6,44 +6,45 @@ import './styles.css';
 
 const Logon = (props) => {
     return (
-        <div className="container">
-          <div className="grid-logon">
-            <header id="showcase" className="box">
-                <div className="bg-image" alt=""></div>
-                <div className="content-wrap">
-                  <img src={logoImg} alt="Portuense - Desde 1921" />
-                </div>
-            </header>
-
-            <main id="main">
-                <section id="section-a" className="box">
-                    <div className="content-wrap">
-                        <form action="" id="login">
-                            <div className="input-block-logon">
-                                <label htmlFor="user">E-mail</label>
-                                <input type="email" id="user" />
-                            </div>
-                           
-                            <div className="input-block-logon">
-                                <label htmlFor="password">Senha</label>
-                                <input type="password" id="password" />
-                            </div>
-                            
-                            <div className="button-container">
-                                <button type="submit" className="btn">
-                                    Login
-                                </button>
-                            </div>
-                        </form>
+        <div>
+          <div id="logon">
+            <div id="logon-esquerda">
+              <div id="logo-img">
+                <img src={logoImg} alt="Portuense - desde 1921"/>
+              </div>
+            </div>
+                
+            <div id="logon-direita">
+                <form action="" id="form-login">
+                    <div id="form-login-direita">
+                      <div className="input-block-logon">
+                          <label htmlFor="user">E-mail</label>
+                          <input type="email" id="user" />
+                      </div>
                     </div>
-                </section>
-            </main>
-          </div>
+                    
+                    <div id="form-login-esquerda">
+                      <div className="input-block-logon">
+                          <label htmlFor="password">Senha</label>
+                          <input type="password" id="password" />
+                      </div>
+                    </div>
+                    
+                    <div id="form-login-footer">
+                      <div className="button-container">
+                          <button type="submit" className="btn">
+                              Login
+                          </button>
+                      </div>
+                    </div>
+                </form>
+            </div>
 
-          {/* <fotter id="main-footer" className="grid">
-            <div><a href="/esqueci-senha">Esqueci a senha</a></div>
-            <div><a href="/user?action=novo">Cadastro</a></div>
-          </fotter> */}
+            <div id="logon-footer">
+              <div><a href="/esqueci-senha">Esqueci a senha</a></div>
+              <div><a href="/user?action=novo">Cadastro</a></div>
+            </div>
+          </div>
         </div>
     )
 };
