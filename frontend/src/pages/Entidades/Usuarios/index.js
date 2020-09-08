@@ -32,7 +32,7 @@ const Usuarios = (props) => {
             api.get(`usuario/${usuarioIdparam}`).then(response => {
                 setNome(response.data.nome);
                 setSobrenome(response.data.sobrenome);
-                setDatanasc(dateFormat(response.data.dataNasc, "dd/mm/yyyy"));
+                setDatanasc(dateFormat(response.data.dataNasc, "yyyy-mm-dd"));
                 setGenero(response.data.genero);
                 setCpf(response.data.cpf);
                 setEmail(response.data.email);
