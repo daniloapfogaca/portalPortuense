@@ -84,19 +84,18 @@ const Unidades = (props) => {
                 <form onSubmit={handleStatus} onReset={handleReset} action="">
                     <div id="esquerda">
                         <div className="input-block">
-                            <label for="nome">Nome</label>
-                            <input id="txtNome" type="text"
+                            <label for="nome" style={{ marginLeft: 33 }}>Nome</label>
+                            <input className="input-unid" id="txtNome" type="text" placeholder="Insira o Nome da Unidade de Medida"
                                 name="nomeUnidade"
                                 value={nomeUnidade}
                                 onChange={e => setNomeUnidade(e.target.value)} />
                         </div>
-                    </div>
-                    <div id="direita">
                         <div className="input-block">
-                            <label for="descricao">Descricao</label>
-                            <input id="txtDescricao" type="text"
+                            <label for="descricao" style={{ marginLeft: 33 }}>Descricao</label>
+                            <input className="input-unid" id="txtDescricao" type="textarea" placeholder="Insira uma Descrição da Unidade"
                                 name="abreviacao"
                                 value={abreviacao}
+                                style={{ height: 75 }}
                                 onChange={e => setAbreviacao(e.target.value)} />
                         </div>
                     </div>

@@ -84,19 +84,18 @@ const Categorias = (props) => {
                 <form onSubmit={handleStatus} onReset={handleReset} action="">
                     <div id="esquerda">
                         <div className="input-block">
-                            <label for="nomeCategoria">Nome da Categoria</label>
-                            <input id="txtNomeCategoria" type="text"
+                            <label for="nomeCategoria" style={{ marginLeft: 33 }}>Nome da Categoria</label>
+                            <input className="input-unid" id="txtNomeCategoria" type="text" placeholder="Insira o Nome da Categoria"
                                 name="nomeCategoria"
                                 value={nomeCategoria}
                                 onChange={e => setNomeCategoria(e.target.value)} />
                         </div>
-                    </div>
-                    <div id="direita">
                         <div className="input-block">
-                            <label for="descricao">Descricao</label>
-                            <input id="txtDescricao" type="text"
+                            <label for="descricao" style={{ marginLeft: 33 }}>Descricao</label>
+                            <input className="input-unid" id="txtDescricao" type="textarea" placeholder="Insira uma Descrição da Categoria"
                                 name="descricao"
                                 value={descricao}
+                                style={{ height: 75 }}
                                 onChange={e => setDescricao(e.target.value)} />
                         </div>
                     </div>

@@ -1,5 +1,6 @@
+
 #logon {
-  max-width: 650px;
+  max-width: 720px;
   max-height: 650px;
   margin: 0 auto;
   margin-top: 10%;
@@ -13,38 +14,44 @@
 
 #logon-esquerda {
   grid-area: esquerda;
-  background: var(--color-primary) url("../../../assets/images/logo_bg.jpg") no-repeat top;
-  background-size: cover;
+  background: url("../../../assets/images/logo_bg.jpg") no-repeat top;
+  background-size: 240px;
   width: 100%;
-  height: auto;
   z-index: -1;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 #logo-img {
   margin-top: 50px;
-  margin-left: 50px;
-  max-width: 120px;
+  margin-left: 100px;
+  max-width: 130px;
   height: auto;
+  
 }
 
 #logo-img img {
   width: 250px;
+  
 }
 
 #logon-direita {
   grid-area: direita;
   background: var(--color-primary);
+  margin-left: 40px;
+ 
 }
 
 #form-login {
   display: block;
-  padding: 10px;
+  padding: 8px;
   margin-top: 10px;
+
 }
 
 .input-block-logon label {
   font-size: 1.3em;
-  color: var(--color-text-base);
+  color: #ffff;
   margin-left: 0.5em;
 }
 
@@ -58,6 +65,7 @@
   margin-top: 1em;
   margin-left: 20px;
   margin-bottom: 30px;
+  background: #f8f3ed;
 }
 
 #form-login-footer {
@@ -79,15 +87,21 @@
 
 #logon-footer {
   grid-area: footer;
-  background: var(--color-box-base);
   color: var(--color-text-base);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
+
+#logon-footer a {
+  margin-left: 0.5em;
+  color: #3f3e3d;
+}
+
 #logon-footer div:first-child {
   justify-self: left;
   margin-left: 0.5em;
+  
 }
 
 #logon-footer div:last-child {
@@ -98,3 +112,5 @@
 @media(min-width: 700px) {
   
 }
+
+

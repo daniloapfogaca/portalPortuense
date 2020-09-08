@@ -120,7 +120,7 @@ const Produtos = (props) => {
                     <div id="esquerda">
                         <div className="input-block">
                             <label for="nomeProduto">Nome do Produto</label>
-                            <input id="txtNomeProduto" type="text"
+                            <input id="txtNomeProduto" type="text" placeholder="Insira o Nome do Produto"
                                 name="nomeProduto"
                                 value={nomeProduto}
                                 onChange={e => setNomeProduto(e.target.value)} />
@@ -140,7 +140,7 @@ const Produtos = (props) => {
                         </div>
                         <div className="input-block">
                             <label for="descricaoCurta">Descrição curta</label>
-                            <input className="desc-curta" id="txtDescricaoCurta" type="text"
+                            <input className="desc-curta" id="txtDescricaoCurta" type="text" placeholder="Insira uma Breve Descrição do Produto"
                                 name="descricaoCurta"
                                 value={descricaoCurta}
                                 onChange={e => setDescricaoCurta(e.target.value)}
@@ -149,7 +149,7 @@ const Produtos = (props) => {
                         </div>
                         <div className="input-block">
                             <label for="descricao">Descrição</label>
-                            <input id="txtDescricao" type="text"
+                            <input id="txtDescricao" type="text" placeholder="Descreva o Produto"
                                 name="descricao"
                                 value={descricao}
                                 onChange={e => setDescricao(e.target.value)}
@@ -160,7 +160,7 @@ const Produtos = (props) => {
                     <div id="direita">
                         <div className="input-block">
                             <label for="codigo">Código do Produto</label>
-                            <input id="txtCodigo" type="text"
+                            <input id="txtCodigo" type="text" placeholder="Informe o Código do Produto"
                                 name="codigo"
                                 value={codigo}
                                 onChange={e => setCodigo(e.target.value)} />
@@ -179,7 +179,7 @@ const Produtos = (props) => {
                         </div>
                         <div className="input-block">
                             <label for="ingredientes">Ingredientes</label>
-                            <input id="txtIngredientes" type="text"
+                            <input id="txtIngredientes" type="text" placeholder="Informe os Ingredientes do Produto"
                                 name="ingredientes"
                                 value={ingredientes}
                                 onChange={e => setIngredientes(e.target.value)}
@@ -187,7 +187,7 @@ const Produtos = (props) => {
                         </div>
                         <div className="input-block">
                             <label for="valor">Valor do Produto</label>
-                            <input id="txtValor" type="text"
+                            <input id="txtValor" type="text" placeholder="Informe o Valor do Produto"
                                 name="valor"
                                 value={valor}
                                 onChange={e => setValor(e.target.value)}

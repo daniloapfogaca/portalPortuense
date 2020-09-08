@@ -2,7 +2,6 @@ import React from 'react';
 import { FiBell, FiSearch, FiChevronDown } from 'react-icons/fi'; //pacote feather icons dentro do react
 import './styles.css';
 
-
 const Header = (props) => {
     return (
         <header>
@@ -12,14 +11,11 @@ const Header = (props) => {
                       <input type="text"/>
                       <button><FiSearch size={18} color="#000000" /></button>
                     </div>
-                    
-
                     <div className="notifications">
-                          <FiBell className="bell" size={28} color="#000000" />
+                          <FiBell className="bell" size={28} color="#f8f3ed" />
                         <span>3</span>
                     </div>
               </div>
-
               <div className="grid-header">
                 <div className="menu-item-a">
                     <a href="#">Produtos</a>
