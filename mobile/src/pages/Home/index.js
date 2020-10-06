@@ -32,7 +32,7 @@ const Home = () => {
     setCurrentIndex(currentIndex === index ? null : index);
   }
 
-  function navigateToDetail(incident) {
+  function navigateToDetail() {
     navigation.navigate('Detail');
     setCurrentIndex(null);
   }

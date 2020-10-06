@@ -7,6 +7,13 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: Constants.statusBarHeight + 10,
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width
+  },
+
+  productBold: {
+    fontWeight: 'bold',
+    fontSize: 16
   },
 
   productNameContainer: {
@@ -15,7 +22,7 @@ export default StyleSheet.create({
   },
 
   goBackIcon: {
-    marginTop: 20,
+    marginTop: 17,
     marginRight: 10,
     marginLeft: 4,
   },
@@ -33,9 +40,9 @@ export default StyleSheet.create({
   },
 
   productInfo: {
-    marginTop: 15,
+    marginTop: 10,
     marginLeft: 8,
-    paddingHorizontal: 2,
+    paddingHorizontal: 8,
   },
 
   productCategory: {
@@ -46,21 +53,44 @@ export default StyleSheet.create({
 
   productName: {
     fontWeight: 'bold',
-    paddingVertical: 5,
+    paddingVertical: 4,
+    fontSize: 16,
+  },
+
+  productDescription: {
+    fontSize: 16,
   },
 
   productPurchaseInfo: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginLeft: 8,
-    paddingHorizontal: 2,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
     marginRight: 8,
+    borderBottomColor: '#a4a3a3',
+    borderBottomWidth: 1,
+    borderTopColor: '#a4a3a3',
+    borderTopWidth: 1,
+    marginVertical: 15,
   },
 
   productQuantity: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 10,
+    marginTop: 8,
+    marginBottom: 8,
+    fontSize: 16,
+  },
+
+  productQuantityValue: {
+    paddingHorizontal: 15,
+    paddingVertical: 4,
+    backgroundColor: '#d4d2d2',
+    marginLeft: 10,
+    marginRight: 10,
+    fontWeight: 'bold',
+    borderRadius: 3,
   },
 
   productValue: {
@@ -69,18 +99,59 @@ export default StyleSheet.create({
     marginTop: 10,
   },
 
+  productValueText: {
+    fontSize: 16
+  },
+
   productTotal: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    marginTop: 10,
+    marginTop: 0,
     marginLeft: 8,
-    paddingHorizontal: 2,
+    paddingHorizontal: 8,
     marginRight: 8,
   },
 
-  productBold: {
-    fontWeight: 'bold'
+  productTotalValue: {
+    fontWeight: 'bold',
+    color: 'green',
+    marginLeft: 8,
+    fontSize: 18,
   },
-  
+
+  productObs: {
+    paddingHorizontal: 8,
+    marginTop: 5,
+  },
+
+  productObsText: {
+    fontSize: 16,
+    borderBottomColor: '#a4a3a3',
+    borderBottomWidth: 1,
+    height: 50,
+    paddingVertical: 10,
+  },
+
+  addCartContainer: {
+    position: 'absolute',
+    bottom: 0,
+    width: Dimensions.get('window').width,
+    minHeight: 50,
+  },
+
+  addCart: {
+    flex: 1,
+    backgroundColor: '#A06D51',
+    paddingVertical: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  addCartText: {
+    color: '#FFF',
+    fontWeight: 'bold',
+    fontSize: 18,
+  }
+
 });
 
