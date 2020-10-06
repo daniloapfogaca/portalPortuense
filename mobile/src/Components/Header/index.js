@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 
-import Logo from '../../assets/img/logo_branco.png';
+import Logo from '../../assets/img/logo_bg.jpg';
 
 import styles from './styles';
 

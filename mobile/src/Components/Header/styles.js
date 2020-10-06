@@ -16,19 +16,31 @@ export default StyleSheet.create({
   logoContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 3,
+    marginTop: 18,
+    backgroundColor: '#FFF',
+    borderRadius: 5,
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+    elevation: 24,
   },
   
   logo: {
     height: 90,
     width: 80,
+    marginHorizontal: 10,
+    marginVertical: 8
   },
 
   infoContainer: {
     flex: 1,
     backgroundColor: '#FFF',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   portuense: {

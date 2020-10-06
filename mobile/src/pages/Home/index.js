@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 import { SearchBar } from 'react-native-elements';
 
 import PaoFrances from '../../assets/img/pao-frances.jpeg';
-import Logo from '../../assets/img/logo_bg.jpg';
 
 import menuData from '../../assets/menuData';
 import styles from './styles';
