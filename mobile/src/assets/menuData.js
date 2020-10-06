@@ -407,7 +407,7 @@ export default [
         productValue: 'R$ 20,00',
       },
       {
-        productName: 'PALMITO',
+        productName: 'PALMITO-',
         productValue: 'R$ 20,00',
       }
     ],
